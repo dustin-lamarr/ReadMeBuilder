@@ -4,8 +4,7 @@ const util = require('util');
 var MarkdownIt = require('markdown-it');
 const writeFileAsync = util.promisify(fs.writeFile);
 
-const userInput = () =>
-    inquirer.prompt([
+var questions = [
         {
             type: "input",
             message: "Enter your full name:",
@@ -14,7 +13,7 @@ const userInput = () =>
         {
             type: "input",
             message: "Enter the name of your project:",
-            name: "projectname",
+            name: "project",
         },
         {
             type: "input",
@@ -24,7 +23,7 @@ const userInput = () =>
         {
             type: "input",
             message: "Enter the installation instructions:",
-            name: "installation",
+            name: "install",
         },
         {
             type: "input",
@@ -34,43 +33,61 @@ const userInput = () =>
         {
             type: "input",
             message: "Enter guidelines for contributing to the project:",
-            name: "contributors",
-        },
-        {
-            type: "input",
-            message: "Enter a brief description of your project:",
-            name: "description",
+            name: "contributor",
         },
         {
             type: "input",
             message: "Enter test instructions:",
             name: "test",
-        }
-    ]);
+        },
+        {
+            type: "input",
+            message: "Enter Git Hub URL: ",
+            name: "github",
+        },
+        {
+            type: "input",
+            message: "Enter Email Address: ",
+            name: "email",
+        },
+        {
+            type: "input",
+            message: "Choose license type: ",
+            name: "license",
+        },
+    ]
+const readme = (answers) => {
+  // answers = JSON.stringify(answers, null, '  ')
+  return `# Project Owner 
+   ${answers.owner}\n` +
+   ` # Project Name
+    ${answers.project}\n` +
+    ` # Project Description
+    ${answers.description}\n` +
+    ` # Installation Instructions
+    ${answers.install}\n` +
+    ` # Usage Instructions
+    ${answers.usage}\n` +
+    ` # Contributor Guidelines
+    ${answers.contributor}\n` +
+    ` # Test Instructions
+    ${answers.test}\n` +
+    ` # Git Hub Repository
+    ${answers.github}\n` +
+    ` # Contact Me
+    ${answers.email}\n` +
+    ` # Project Licence
+    ${answers.license}\n`
 
-const generateReadme = (answers) => {
-    md = new MarkdownIt(answers);
-    const projectOwner = md.render("# Project Owner");
-    const owner = md.renderInline(answers.owner);
-    const projectName = md.render('# Project Name');
-    const project = md.renderInline(answers.projectname);
-    const projectDesc = md.render("Project Description");
-    const description = md.render(answers.description);
-    const installationInst = md.render("# Installation Instructions");
-    const usageInfo
-    const contribGuidelines
-    const testInst
-    const license
-    const githubUser
-    const emailAddress
-    console.log(projectTitle);
 }
-userInput()
-    .then((answers) => writeFileAsync('ReadMe.md', generateReadme(answers)))
+
+// readme();
+inquirer.prompt(questions)
+    .then((answers) => writeFileAsync('test.md', readme(answers)))
+    // .then((answers) => console.log(answers))
+    .catch((err) => console.error(err))
 
 
-
-// const generateReadme = (answers) =>
 
 
 
