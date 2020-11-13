@@ -1,7 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
-var MarkdownIt = require('markdown-it');
 const writeFileAsync = util.promisify(fs.writeFile);
 
 var questions = [
@@ -57,11 +56,10 @@ var questions = [
         },
     ]
 const readme = (answers) => {
-  // answers = JSON.stringify(answers, null, '  ')
   return `# Project Owner 
-   ${answers.owner}\n` +
+  <em>${answers.owner}</em>\n` +
    `\n # Project Name
-    ${answers.project}\n` +
+   **${answers.project}**\n` +
     `\n # Project Description
     ${answers.description}\n` +
     `\n # Installation Instructions
@@ -81,7 +79,6 @@ const readme = (answers) => {
 
 }
 
-// readme();
 inquirer.prompt(questions)
     .then((answers) => writeFileAsync('test.md', readme(answers)))
     // .then((answers) => console.log(answers))
