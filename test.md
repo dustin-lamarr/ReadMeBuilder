@@ -1,20 +1,21 @@
 # Project Owner 
    dustin
  # Project Name
-    voter
+    blah
+
  # Project Description
-    voting profile
+    fjfj
  # Installation Instructions
-    just use it
+    slkdj
  # Usage Instructions
-    same
+    lkejr
  # Contributor Guidelines
-    don't care
+    adh
  # Test Instructions
-    figure it out
+    fjfd
  # Git Hub Repository
-    dustinlamarr
+    ldfkd
  # Contact Me
-    dustin@
+    dldfj
  # Project Licence
-    open
+    lfkj

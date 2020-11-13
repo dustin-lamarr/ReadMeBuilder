@@ -60,23 +60,23 @@ const readme = (answers) => {
   // answers = JSON.stringify(answers, null, '  ')
   return `# Project Owner 
    ${answers.owner}\n` +
-   ` # Project Name
+   `\n # Project Name
     ${answers.project}\n` +
-    ` # Project Description
+    `\n # Project Description
     ${answers.description}\n` +
-    ` # Installation Instructions
+    `\n # Installation Instructions
     ${answers.install}\n` +
-    ` # Usage Instructions
+    `\n # Usage Instructions
     ${answers.usage}\n` +
-    ` # Contributor Guidelines
+    `\n # Contributor Guidelines
     ${answers.contributor}\n` +
-    ` # Test Instructions
+    `\n # Test Instructions
     ${answers.test}\n` +
-    ` # Git Hub Repository
+    `\n # Git Hub Repository
     ${answers.github}\n` +
-    ` # Contact Me
+    `\n # Contact Me
     ${answers.email}\n` +
-    ` # Project Licence
+    `\n # Project Licence
     ${answers.license}\n`
 
 }
