@@ -57,16 +57,17 @@ var questions = [
     ]
 const readme = (answers) => {
   return `# Project Owner 
-  **${answers.owner}**\n` +
+  ## ${answers.owner}\n` +
    `\n # Project Name
-   **${answers.project}**\n` +
+   ## ${answers.project}\n` +
    `# Table of Contents:
   1. [Project Description](#Product-Description)
   2. [Installation](#Installation)
   3. [Usage](#Usage)
   4. [Contributing](#Contributing)
-  5. [Tests](#Tests)\
-  6. [Questions](#Questions?)` +
+  5. [Tests](#Tests)
+  6. [Questions](#Questions?)
+  7. [Licence](#Project-Licence)` +
     `\n ## Project Description
     ${answers.description}\n` +
     `\n ## Installation
