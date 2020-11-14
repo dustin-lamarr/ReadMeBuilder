@@ -57,24 +57,30 @@ var questions = [
     ]
 const readme = (answers) => {
   return `# Project Owner 
-  <em>${answers.owner}</em>\n` +
+  **${answers.owner}**\n` +
    `\n # Project Name
    **${answers.project}**\n` +
-    `\n # Project Description
+   `# Table of Contents:
+  1. [Project Description](#Product-Description)
+  2. [Installation](#Installation)
+  3. [Usage](#Usage)
+  4. [Contributing](#Contributing)
+  5. [Tests](#Tests)\
+  6. [Questions](#Questions?)` +
+    `\n ## Project Description
     ${answers.description}\n` +
-    `\n # Installation Instructions
+    `\n ## Installation
     ${answers.install}\n` +
-    `\n # Usage Instructions
+    `\n ## Usage
     ${answers.usage}\n` +
-    `\n # Contributor Guidelines
+    `\n ## Contributing
     ${answers.contributor}\n` +
-    `\n # Test Instructions
+    `\n ## Tests
     ${answers.test}\n` +
-    `\n # Git Hub Repository
-    ${answers.github}\n` +
-    `\n # Contact Me
-    ${answers.email}\n` +
-    `\n # Project Licence
+    `\n ## Questions?
+    <${answers.github}>\n
+    <${answers.email}>\n` +
+    `\n ## Project Licence
     ${answers.license}\n`
 
 }
