@@ -87,7 +87,7 @@ const readme = (answers) => {
 }
 
 inquirer.prompt(questions)
-    .then((answers) => writeFileAsync('test.md', readme(answers)))
+    .then((answers) => writeFileAsync('README.md', readme(answers)))
     // .then((answers) => console.log(answers))
     .catch((err) => console.error(err))
 
