@@ -67,7 +67,7 @@ const readme = (answers) => {
   4. [Contributing](#Contributing)
   5. [Tests](#Tests)
   6. [Questions](#Questions?)
-  7. [Licence](#Project-Licence)` +
+  7. [Licence](#Licence)` +
     `\n ## Project Description
     ${answers.description}\n` +
     `\n ## Installation
@@ -81,7 +81,7 @@ const readme = (answers) => {
     `\n ## Questions?
     <${answers.github}>\n
     <${answers.email}>\n` +
-    `\n ## Project Licence
+    `\n ## Licence
     ${answers.license}\n`
 
 }
